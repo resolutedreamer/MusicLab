@@ -44,14 +44,15 @@
                     </div>
                 </div>
                 -->
-                
-                <div class="onoffswitch">
-                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="playback_control" checked>
-                    <label class="onoffswitch-label" for="sw_digital_out">
-                        <span class="onoffswitch-inner"></span>
-                        <span class="onoffswitch-switch"></span>
-                    </label>
-                </div>
+                <p>
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="playback_control" checked>
+                        <label class="onoffswitch-label" for="sw_digital_out">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </p>
 
             </div>
             <div class="col-md-6">
@@ -60,40 +61,46 @@
                     <label for="sel1">Song Selection:</label>
 
                     <select class="form-control" id="song_select_controller">
-                        <option value="JingleBells">JingleBells</option>
-                        <option value="Starcraft">Starcraft</option>
-                        <option value="MegaMan">MegaMan</option>
-                        <option value="Airplane">Airplane</option>
+                        <option id="op1" value="JingleBells">JingleBells</option>
+                        <option id="op2" value="Starcraft">Starcraft</option>
+                        <option id="op3" value="MegaMan">MegaMan</option>
+                        <option id="op4" value="Airplane">Airplane</option>
                     </select>
                 </div>
             </div>
         </div>
         <div class="row">
             <h1>Sensors!</h1>
+            <div id="chart_div"></div>
+
             <div class="col-md-4">
                 <h2>Volume</h2>
-                <p>Value</p>
-                <!--
-                <div id="chart_div"></div>
-                    -->
+                <p id="volume_value">Value</p>
+                <div id="volume_chart_div"></div>
+                    
                 <h2>Motor Pause</h2>
-                <p>Value</p>
+                <p id="motor_pause_value">Value</p>
+                <div id="motor_pause_chart_div"></div>
 
                 <h2>Glass Distance</h2>
-                <p>Value</p>
+                <p id="glass_distance_value">Value</p>
+                <div id="glass_distance_chart_div"></div>
             </div>
             <div class="col-md-4">
                 <h2>Light Level</h2>
-                <p>Value</p>
+                <p id="light_lux_value">Value</p>
+                <div id="light_lux_chart_div"></div>
                 <h2>System Start Control</h2>
-                <p>Value</p>
+                <p id="system_start_value">Value</p>
+                <div id="system_start_chart_div"></div>
             </div>
             <div class="col-md-4">
                 <h2>System Pause Control</h2>
-                <p>Value</p>
+                <p id="system_pause_value">Value</p>
+                <div id="system_pause_chart_div"></div>
                 <h2>Track Number</h2>
-                <p>Value</p>
-                
+                <p id="track_number_value">Value</p>
+                <div id="track_number_chart_div"></div>
             </div>
 
 
