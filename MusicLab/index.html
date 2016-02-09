@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Lab 2016!</title>
+	<meta charset="utf-8" />    
+    
+    <!--External CSS Files-->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/switch.css" rel="stylesheet" />
+    <link href="Content/bootstrap-switch/bootstrap3/bootstrap-switch.min.css" rel="stylesheet" />
+    
+    <!--External Script Files-->
+    <script src="scripts/jquery-2.2.0.min.js"></script>
+    <script src="scripts/bootstrap-switch.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!--My Script Files-->
+    <script src="scripts/mongo_rest.js"></script>
+    <script src="scripts/charts.js"></script>
+    <script>
+        $("[name='my-checkbox']").bootstrapSwitch();
+        console.log("Hopefully Checkbox Changed?");
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Music Lab 2016!</h1>
+            <h2>An Intel Edison based Sensor-Actuator System</h2>
+        </div>
+        <div class="row">
+            <h1>Actuators! - Music Control</h1>
+            <div class="col-md-6">
+                <h2>Playback Control</h2>
+                
+                <!--
+                <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-on bootstrap-switch-id-switch-state bootstrap-switch-animate">
+                    <div class="bootstrap-switch-container" style="width: 156px; margin-left: 0px;">
+                        <span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 52px;">ON</span>
+                        <span class="bootstrap-switch-label" style="width: 52px;">&nbsp;</span>
+                        <span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 52px;">OFF</span>
+                        <input id="switch-state" name="my-checkbox" type="checkbox" checked="">
+                    </div>
+                </div>
+                -->
+                
+                <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="playback_control" checked>
+                    <label class="onoffswitch-label" for="sw_digital_out">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <h2>Which song do you want to play?</h2>
+                <div class="form-group">
+                    <label for="sel1">Song Selection:</label>
+
+                    <select class="form-control" id="song_select_controller">
+                        <option value="JingleBells">JingleBells</option>
+                        <option value="Starcraft">Starcraft</option>
+                        <option value="MegaMan">MegaMan</option>
+                        <option value="Airplane">Airplane</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Sensors!</h1>
+            <div class="col-md-4">
+                <h2>Volume</h2>
+                <p>Value</p>
+                <!--
+                <div id="chart_div"></div>
+                    -->
+                <h2>Motor Pause</h2>
+                <p>Value</p>
+
+                <h2>Glass Distance</h2>
+                <p>Value</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Light Level</h2>
+                <p>Value</p>
+                <h2>System Start Control</h2>
+                <p>Value</p>
+            </div>
+            <div class="col-md-4">
+                <h2>System Pause Control</h2>
+                <p>Value</p>
+                <h2>Track Number</h2>
+                <p>Value</p>
+                
+            </div>
+
+
+                <!--
+        <h2>Potentiometer!</h2>
+        <p>Potentiometer Value</p>
+        <h2>Ultrasonic Sensor!</h2>
+        <p>Ultrasonic Sensor Value</p>
+        <h2>Tilt Sensor!</h2>
+        <p>Tilt Sensor Value</p>
+        <h2>Light Sensor!</h2>
+        <p>Light Sensor Value:</p>
+        -->
+
+            </div>
+
+    </div>
+</body>
+</html>
